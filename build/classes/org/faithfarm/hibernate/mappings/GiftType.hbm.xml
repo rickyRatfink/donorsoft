@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 9, 2013 3:11:11 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="org.faithfarm.domain.GiftType" table="gift_type" catalog="ffarm_dev">
+        <id name="giftTypeId" type="java.lang.Long">
+            <column name="gift_type_id" />
+            <generator class="identity" />
+        </id>
+        <property name="name" type="string">
+            <column name="name" length="60" />
+        </property>
+        <set name="giftPledges" table="gift_pledge" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="gift_type_id" not-null="true" />
+            </key>
+            <one-to-many class="org.faithfarm.domain.GiftPledge" />
+        </set>
+    </class>
+</hibernate-mapping>
