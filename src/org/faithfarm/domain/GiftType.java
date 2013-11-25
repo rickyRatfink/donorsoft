@@ -1,6 +1,6 @@
 package org.faithfarm.domain;
 
-// Generated Nov 9, 2013 3:11:10 PM by Hibernate Tools 3.4.0.CR1
+// Generated Nov 25, 2013 11:59:15 AM by Hibernate Tools 4.0.0
 
 import java.util.HashSet;
 import java.util.Set;

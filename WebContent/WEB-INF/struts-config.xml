@@ -9,7 +9,7 @@
     <form-beans>
         <form-bean name="loginForm" type="org.faithfarm.struts.form.LoginForm"></form-bean>
         <form-bean name="fundsForm" type="org.faithfarm.struts.form.FundsForm"></form-bean>
-        <form-bean name="campaignForm" type="org.faithfarm.struts.form.CampaignForm"></form-bean>
+        <form-bean name="campaignsForm" type="org.faithfarm.struts.form.CampaignForm"></form-bean>
         <form-bean name="donorsForm" type="org.faithfarm.struts.form.DonorsForm"></form-bean>
         <form-bean name="giftsForm" type="org.faithfarm.struts.form.GiftsForm"></form-bean>
     </form-beans>
@@ -40,10 +40,11 @@
                  <forward name="login" path="/pages/security/login.jsp" redirect="true"/>
         </action>
         
-        <action name="campaignForm" path="/Campaign" type="org.faithfarm.struts.action.CampaignAction" scope="session"  >
-                 <forward name="success" path="/pages/index.jsp" redirect="true"/>
-                 <forward name="failure" path="/pages/security/login_error.jsp" redirect="true"/>
-                 <forward name="error" path="/pages/error.jsp" redirect="true"/>               
+        <action name="campaignsForm" path="/Campaigns" type="org.faithfarm.struts.action.CampaignAction" scope="session"  >
+                 <forward name="success" path="/pages/campaigns/index.jsp" redirect="true"/>
+                 <forward name="failure" path="/pages/campaigns/login_error.jsp" redirect="true"/>
+                 <forward name="error" path="/pages/error.jsp" redirect="true"/>   
+                 <forward name="login" path="/pages/security/login.jsp" redirect="true"/>            
         </action>
         
         <action name="donorsForm" path="/Donors" type="org.faithfarm.struts.action.DonorsAction" scope="session"  >

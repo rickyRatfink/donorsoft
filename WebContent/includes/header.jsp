@@ -79,11 +79,11 @@ function submitForm(action, key) {
 <tr>
 <td width="800">
 <ul class="menu">
-	<li id="FO"><a href="#" >Donors</a></li>
-	<li><a href="<%=request.getContextPath()%>/Funds.do">Funds</a></li>
-	<li><a href="#">Campaigns</a></li> 
+	<li id="FO"><a href="#" >Accounts</a></li>
+	<li><a href="<%=request.getContextPath()%>/Funds.do?action=">Funds</a></li>
+	<li><a href="<%=request.getContextPath()%>/Campaigns.do?action=">Campaigns</a></li> 
+	<li><a href="#">Approaches</a></li> 
 	<li><a href="<%=request.getContextPath()%>/Gifts.do?action=">Gifts/Pledges</a></li> 
-	<li><a href="#">Queries</a></li>
 	<li><a href="#">Communications</a></li>
 	<li><a href="#">Reports</a></li> 
 </ul> 

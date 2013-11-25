@@ -14,43 +14,28 @@
      <table width="900" cellpadding="0" cellspacing="0" border="0">
      <tr>
            <td width="5" height="18" background="<%=request.getContextPath() %>/images/searchHeaderBk.png" class="searchFieldHeader"></td>
-           <td width="90" height="18" background="<%=request.getContextPath() %>/images/searchHeaderBk.png" class="searchFieldHeader">RESIDENT ID</td>
-           <td width="3" height="18" background="<%=request.getContextPath() %>/images/searchHeaderSpacer.png"></td>
-           <td width="150" height="18" background="<%=request.getContextPath() %>/images/searchHeaderBk.png" class="searchFieldHeader">LAST NAME</td>
-           <td width="3" height="18" background="<%=request.getContextPath() %>/images/searchHeaderSpacer.png"></td>
-           <td width="50" height="18" background="<%=request.getContextPath() %>/images/searchHeaderBk.png" class="searchFieldHeader">MI</td>
-           <td width="3" height="18" background="<%=request.getContextPath() %>/images/searchHeaderSpacer.png"></td>
-           <td width="150" height="18" background="<%=request.getContextPath() %>/images/searchHeaderBk.png" class="searchFieldHeader">FIRSTNAME</td>
-           <td width="3" height="18" background="<%=request.getContextPath() %>/images/searchHeaderSpacer.png"></td>
-           <td width="70" height="18" background="<%=request.getContextPath() %>/images/searchHeaderBk.png" class="searchFieldHeader">SSN</td>
-           <td width="3" height="18" background="<%=request.getContextPath() %>/images/searchHeaderSpacer.png"></td>
-           <td width="70" height="18" background="<%=request.getContextPath() %>/images/searchHeaderBk.png" class="searchFieldHeader">DOB</td>
-           <td width="3" height="18" background="<%=request.getContextPath() %>/images/searchHeaderSpacer.png"></td>
-           <td width="100" height="18" background="<%=request.getContextPath() %>/images/searchHeaderBk.png" class="searchFieldHeader">ENTRY DATE</td>
-           <td width="3" height="18" background="<%=request.getContextPath() %>/images/searchHeaderSpacer.png"></td>
-           <td width="130" height="18" background="<%=request.getContextPath() %>/images/searchHeaderBk.png" class="searchFieldHeader">STATUS</td>
+           <td width="90" height="18" background="<%=request.getContextPath() %>/images/searchHeaderBk.png" class="searchFieldHeader">FUND ID</td>
+           <td width="1" height="18" background="<%=request.getContextPath() %>/images/searchHeaderSpacer.png"></td>
+           <td width="650" height="18" background="<%=request.getContextPath() %>/images/searchHeaderBk.png" class="searchFieldHeader">NAME</td>
+           <td width="1" height="18" background="<%=request.getContextPath() %>/images/searchHeaderSpacer.png"></td>
+           <td width="50" height="18" background="<%=request.getContextPath() %>/images/searchHeaderBk.png" class="searchFieldHeader">ENABLED</td>
      </tr>
-    <logic:notEmpty name="fundsForm" property="fundsList">
-    <!-- 
-	    <logic:iterate id="loop" name="fundsForm" property="intakeList">
+    <logic:notEmpty name="fundsForm" property="fundList">
+    
+	    <logic:iterate id="loop" name="fundsForm" property="fundList">
 	    <% count++; 
 	    String style="Odd";
 	    if (count%2==0) style="Even"; %>
 	    <tr>
-	       <td colspan="2" class="searchFieldResult<%=style%>" align="center"> <a href="<%=request.getContextPath()%>/Intake.do?action=Edit&key=<bean:write name="loop" property="intakeId"/>" style="text-decoration:none;font-size:.95em;"><bean:write name="loop" property="intakeId"/></a></td>
-	       <td colspan="2" class="searchFieldResult<%=style%>"><bean:write name="loop" property="lastname"/></td>
-	       <td colspan="2" class="searchFieldResult<%=style%>"><bean:write name="loop" property="mi"/></td>
-	       <td colspan="2" class="searchFieldResult<%=style%>"><bean:write name="loop" property="firstname"/></td>
-	       <td colspan="2" class="searchFieldResult<%=style%>"><bean:write name="loop" property="ssn"/></td>
-	       <td colspan="2" class="searchFieldResult<%=style%>"><bean:write name="loop" property="dob"/></td>
-	       <td colspan="2" class="searchFieldResult<%=style%>"><bean:write name="loop" property="entryDate"/></td>
-	       <td colspan="2" class="searchFieldResult<%=style%>"><bean:write name="loop" property="intakeStatus"/></td>
-	   </tr>
+	       <td colspan="2" class="searchFieldResult<%=style%>" align="center"> <a href="<%=request.getContextPath()%>/Intake.do?action=Edit&key=<bean:write name="loop" property="fundId"/>" style="text-decoration:none;font-size:.95em;"><bean:write name="loop" property="fundId"/></a></td>
+	       <td colspan="2" class="searchFieldResult<%=style%>"><bean:write name="loop" property="name"/></td>
+	       <td colspan="2" class="searchFieldResult<%=style%>"><bean:write name="loop" property="enabled"/></td>
+	    </tr>
 	   </logic:iterate>
-	    -->
+	    
 		<tr><td height="3" colspan="16" bgcolor="#b2b3b5"></td></tr>
 	</logic:notEmpty>
-	<logic:empty name="fundsForm" property="fundsList">
+	<logic:empty name="fundsForm" property="fundList">
 		 <td colspan="16" class="searchFieldResultEven" align="left">No Funds</td>
 	</logic:empty>
 	</table>

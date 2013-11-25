@@ -10,17 +10,26 @@
 		<h2>Create New Fund</h2>
 		<table width="100%" cellpadding="0" cellspacing="0" border="0">
 		<tr>
-			<td class="field">Fund Name</td>
-			<td class="field">Attribute1</td>
-			<td class="field">Attribute2</td>
-			<td class="field">Attribute3</td>
+			<td class="field">Name</td>
+			<td><html:text property="fund.name" size="40" maxlength="80" styleClass="textbox" /></td>
 		</tr>
 		<tr>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
+			<td class="field">Description</td>
+			<td><html:textarea property="fund.description" cols="1" rows="1" styleClass="textarea" /></br></br></td>
 		</tr>
+		<tr>
+			<td class="field">Cash Account</td>
+			<td><html:text property="fund.cashAccount" size="20" maxlength="20" styleClass="textbox" /></td>
+		</tr>
+		<tr>
+			<td class="field">Receivables Account</td>
+			<td><html:text property="fund.receivablesAccount" size="20" maxlength="20" styleClass="textbox" /></td>
+		</tr>
+		<tr>
+			<td class="field">Revenue Account</td>
+			<td><html:text property="fund.revenueAccount" size="20" maxlength="20" styleClass="textbox" /></td>
+		</tr>
+		
 		</table>
 		<table width="100%" cellpadding="0" cellspacing="0" border="0">
 		<tr>

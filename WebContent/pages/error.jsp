@@ -5,12 +5,12 @@
 	<tr>
 		<td class="mainBkgr">
 		<div id="boxContent">
-			    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+			    <table width="100%" height="500" cellpadding="0" cellspacing="0" border="0">
 				<tr>
-				<td valign="top" width="90">
+				<td valign="top" width="90" style="padding-top:10px; padding-left:10px;">
 					<img src="<%=request.getContextPath()%>/images/errorPage.jpg" %>
 				</td>
-				<td align="left">
+				<td align="left" valign="top" style="padding-top:10px; padding-left:10px;">
 					<table width="100%" cellpadding="0" cellspacing="0" border="0">
 					<tr>
 				       <td valign="top">
@@ -19,7 +19,7 @@
 					</tr>
 						<td valign="top" style="padding-left:10px;">
 						The following error details have been reported by the server application:<br/>
-						<i><%= request.getParameter("SYSTEM_ERR") %></i> 
+						<i><%= request.getParameter("SYSTEM_ERROR") %></i> 
 						<br/>
 						</td>
 					</tr>

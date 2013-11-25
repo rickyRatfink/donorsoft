@@ -4,21 +4,29 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.struts.action.ActionForm;
-import org.faithfarm.domain.Funds;
+import org.faithfarm.domain.Fund;
 
 public class FundsForm extends ActionForm {
 
-	List<Funds> fundsList = new ArrayList<Funds>();
+	private Fund fund = new Fund();
+	private List<Fund> fundList = new ArrayList<Fund>();
 	
-	String action;
+	private String action;
 
-	
-	public List<Funds> getFundsList() {
-		return fundsList;
+	public Fund getFund() {
+		return fund;
 	}
 
-	public void setFundsList(List<Funds> fundsList) {
-		this.fundsList = fundsList;
+	public void setFund(Fund fund) {
+		this.fund = fund;
+	}
+
+	public List<Fund> getFundList() {
+		return fundList;
+	}
+
+	public void setFundList(List<Fund> fundList) {
+		this.fundList = fundList;
 	}
 
 	public String getAction() {
@@ -28,6 +36,7 @@ public class FundsForm extends ActionForm {
 	public void setAction(String action) {
 		this.action = action;
 	}
+
 	
 	
 }

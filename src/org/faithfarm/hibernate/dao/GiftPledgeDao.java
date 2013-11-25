@@ -37,6 +37,7 @@ public class GiftPledgeDao {
 				session.getTransaction().rollback();
 			}
 			e.printStackTrace();
+			throw e;
 		}
 		finally {
 			session.flush();
@@ -72,6 +73,7 @@ public class GiftPledgeDao {
 				session.getTransaction().rollback();
 			}
 			e.printStackTrace();
+			throw e;
 		}
 		finally {
 			session.flush();
@@ -97,6 +99,7 @@ public class GiftPledgeDao {
 				session.getTransaction().rollback();
 			}
 			e.printStackTrace();
+			throw e;
 		}
 		finally {
 			session.flush();
@@ -120,6 +123,7 @@ public class GiftPledgeDao {
 				session.getTransaction().rollback();
 			}
 			e.printStackTrace();
+			throw e;
 		}
 		finally {
 			session.flush();
@@ -143,6 +147,7 @@ public class GiftPledgeDao {
 				session.getTransaction().rollback();
 			}
 			e.printStackTrace();
+			throw e;
 		}
 		finally {
 			session.flush();

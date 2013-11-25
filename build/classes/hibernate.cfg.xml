@@ -22,7 +22,11 @@
     <property name="hibernate.dbcp.validationQuery">select 1 from dual</property>
      -->
     <property name="hibernate.current_session_context_class">thread</property> 
-    <property name="show_sql">true</property>
+    <property name="show_sql">false</property>
+    <mapping resource="org/faithfarm/hibernate/mappings/Account.hbm.xml"/> 
+    <mapping resource="org/faithfarm/hibernate/mappings/Approach.hbm.xml"/> 
+    <mapping resource="org/faithfarm/hibernate/mappings/Campaign.hbm.xml"/> 
+    <mapping resource="org/faithfarm/hibernate/mappings/Fund.hbm.xml"/> 
     <mapping resource="org/faithfarm/hibernate/mappings/GiftType.hbm.xml"/> 
     <mapping resource="org/faithfarm/hibernate/mappings/GiftPledge.hbm.xml"/> 
   	<mapping resource="org/faithfarm/hibernate/mappings/SystemUser.hbm.xml"/> 

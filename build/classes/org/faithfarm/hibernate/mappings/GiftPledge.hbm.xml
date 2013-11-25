@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated Nov 9, 2013 3:11:11 PM by Hibernate Tools 3.4.0.CR1 -->
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 25, 2013 11:59:22 AM by Hibernate Tools 4.0.0 -->
 <hibernate-mapping>
     <class name="org.faithfarm.domain.GiftPledge" table="gift_pledge" catalog="ffarm_dev">
         <id name="giftPledgeId" type="java.lang.Long">
@@ -23,17 +23,17 @@
         <property name="nonDeductibleAmount" type="java.lang.Double">
             <column name="non_deductible_amount" precision="22" scale="0" />
         </property>
-        <property name="fund" type="java.lang.Long">
-            <column name="fund" />
+        <property name="fundId" type="java.lang.Long">
+            <column name="fund_id" />
         </property>
-        <property name="campaign" type="java.lang.Long">
-            <column name="campaign" />
+        <property name="campaignId" type="java.lang.Long">
+            <column name="campaign_id" />
         </property>
-        <property name="approach" type="java.lang.Long">
-            <column name="approach" />
+        <property name="approachId" type="java.lang.Long">
+            <column name="approach_id" />
         </property>
-        <property name="letter" type="java.lang.Long">
-            <column name="letter" />
+        <property name="letterId" type="java.lang.Long">
+            <column name="letter_id" />
         </property>
         <property name="receipt" type="string">
             <column name="receipt" length="80" />
